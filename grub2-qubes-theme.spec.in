@@ -30,7 +30,7 @@ Provides: qubes-grub = %{version}-%{release}
 install -m 644 -p %{SOURCE1} %{SOURCE10} .
 
 %build
-convert %{SOURCE1} qubes.png
+convert -size 1920x1080 -background none %{SOURCE1} qubes.png
 
 %install
 mkdir -p %{buildroot}%{_grubthemedir}/qubes
