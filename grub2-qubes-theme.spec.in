@@ -1,0 +1,46 @@
+%global base_name breeze-grub
+%global debug_package %{nil}
+%global _grubthemedir /boot/grub2/themes
+
+Name: grub2-qubes-theme
+Version: @VERSION@
+Release: 1%{?dist}
+Summary: Qubes theme for GRUB
+
+License: GPLv3
+URL: https://cgit.kde.org/%{base_name}.git
+
+Source0: %{base_name}-%{version}.tar.xz
+Source1: splash.svg
+Source10: README.Qubes
+
+Patch0: 0001-Change-desktop-color-to-Qubes-background.patch
+Patch1: 0002-Adjust-boot-menu-size-to-properly-show-advanced-entr.patch
+Patch2: 0003-Change-default-gray-color-to-render-better-with-Qube.patch
+
+BuildRequires: ImageMagick
+Requires: grub2
+Provides: qubes-grub = %{version}-%{release}
+
+%description
+%{summary}.
+
+%prep
+%autosetup -n %{base_name}-%{version} -p1
+install -m 644 -p %{SOURCE1} %{SOURCE10} .
+
+%build
+convert %{SOURCE1} qubes.png
+
+%install
+mkdir -p %{buildroot}%{_grubthemedir}/qubes
+cp -r breeze/* %{buildroot}%{_grubthemedir}/qubes/
+install -m 644 qubes.png %{buildroot}%{_grubthemedir}/qubes/qubes.png
+
+%files
+%license COPYING
+%doc README.Qubes
+%{_grubthemedir}/qubes
+
+%changelog
+@CHANGELOG@

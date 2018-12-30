@@ -1,0 +1,26 @@
+From c2bb7c545a0cef638cd0998d3c91be733e7377fe Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fr=C3=A9d=C3=A9ric=20Pierret=20=28fepitre=29?=
+ <frederic.epitre@orange.fr>
+Date: Sun, 30 Dec 2018 13:13:13 +0100
+Subject: [PATCH] Adjust boot menu size to properly show advanced entry
+
+---
+ breeze/theme.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/breeze/theme.txt b/breeze/theme.txt
+index d95bf02..95db08a 100644
+--- a/breeze/theme.txt
++++ b/breeze/theme.txt
+@@ -47,7 +47,7 @@ desktop-image: "qubes.png"
+ # Show the boot menu
+ + boot_menu {
+     left = 50%-200
+-    width = 400
++    width = 450
+     # NB: this is scooped upwards from the middle.
+     #     effectively 50px are below and the remaining 150 above
+     top = 50%-150
+-- 
+2.20.1
+

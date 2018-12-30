@@ -1,0 +1,26 @@
+From 57bdb93108b90f664e6a7c574b43aef3823201f7 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fr=C3=A9d=C3=A9ric=20Pierret=20=28fepitre=29?=
+ <frederic.epitre@orange.fr>
+Date: Sun, 30 Dec 2018 13:10:36 +0100
+Subject: [PATCH] Change desktop color to Qubes background
+
+---
+ breeze/theme.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/breeze/theme.txt b/breeze/theme.txt
+index 72fce28..d95bf02 100644
+--- a/breeze/theme.txt
++++ b/breeze/theme.txt
+@@ -28,7 +28,7 @@ title-font: "Unifont Regular 14"
+ message-font: "Unifont Regular 14"
+ message-color: "#7f8c8d"
+ message-bg-color: "#4d4d4d" # TODO: whatever is this for?
+-desktop-color: "#000000" # black
++desktop-image: "qubes.png"
+ 
+ # title
+ # NOTE: can't put this in a vbox because GRUB is crap and item highlighting
+-- 
+2.20.1
+
