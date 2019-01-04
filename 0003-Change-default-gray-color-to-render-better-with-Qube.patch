@@ -1,0 +1,51 @@
+From 71f8bb6c345d71d24ca030efb93adc3a9f67589a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fr=C3=A9d=C3=A9ric=20Pierret=20=28fepitre=29?=
+ <frederic.epitre@orange.fr>
+Date: Sun, 30 Dec 2018 13:15:22 +0100
+Subject: [PATCH] Change default gray color to render better with Qubes
+ background
+
+---
+ breeze/theme.txt | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/breeze/theme.txt b/breeze/theme.txt
+index 95db08a..6ebad9b 100644
+--- a/breeze/theme.txt
++++ b/breeze/theme.txt
+@@ -61,7 +61,7 @@ desktop-image: "qubes.png"
+     item_icon_space = 0
+     item_spacing = 1
+     item_font =  "Unifont Regular 16"
+-    item_color = "#7f8c8d"
++    item_color = "#4d4d4d"
+     selected_item_font = "Unifont Bold 16"
+     selected_item_color = "#ffffff"
+ }
+@@ -70,10 +70,10 @@ desktop-image: "qubes.png"
+     left = 50%-200 # same as menu
+     top = 50%+113 # (50+16+19+28) half menu + spacer + progress + spacer
+     width = 400 # same as menu
+-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Enter] Boot the selected OS" }
+-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Up and Down Key] navigation" }
+-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[E] Edit Selection" }
+-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[C] GRUB Command Line" }
++    + label { width = 400 align = "center" color = "#4d4d4d" font = "Unifont Regular 14" text = "[Enter] Boot the selected OS" }
++    + label { width = 400 align = "center" color = "#4d4d4d" font = "Unifont Regular 14" text = "[Up and Down Key] navigation" }
++    + label { width = 400 align = "center" color = "#4d4d4d" font = "Unifont Regular 14" text = "[E] Edit Selection" }
++    + label { width = 400 align = "center" color = "#4d4d4d" font = "Unifont Regular 14" text = "[C] GRUB Command Line" }
+ }
+ 
+ # Show a styled horizontal progress bar
+@@ -97,7 +97,7 @@ desktop-image: "qubes.png"
+     height = 19 # 14pt
+     show_text = true
+     font = "Unifont Regular 14"
+-    text_color = "#7f8c8d"
++    text_color = "#4d4d4d"
+     align = "center"
+     text = "@TIMEOUT_NOTIFICATION_MIDDLE@"
+     bar_style = "progress_bar2_*.png"
+-- 
+2.20.1
+
