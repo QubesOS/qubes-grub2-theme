@@ -6,6 +6,6 @@ and comment-out line:
 GRUB_TERMINAL_OUTPUT="console"
 
 Then, run 
-grub2-mkconfig -o /boot/efi/EFI/qubes/xen.cfg
+grub2-mkconfig -o /boot/efi/EFI/qubes/grub.cfg
 if using EFI, otherwise,
 grub2-mkconfig -o /boot/grub2/grub.cfg
