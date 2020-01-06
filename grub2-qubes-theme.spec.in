@@ -4,7 +4,7 @@
 
 Name: grub2-qubes-theme
 Version: @VERSION@
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Qubes theme for GRUB
 
 License: GPLv3
