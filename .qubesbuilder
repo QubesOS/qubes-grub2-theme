@@ -1,0 +1,8 @@
+host:
+  rpm:
+    spec:
+    - grub2-qubes-theme.spec
+source:
+  files:
+  - url: https://download.kde.org/stable/plasma/@VERSION@/breeze-grub-@VERSION@.tar.xz
+    sha256: breeze-grub-@VERSION@.tar.xz.sha256
