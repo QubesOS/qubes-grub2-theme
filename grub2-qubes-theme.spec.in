@@ -18,7 +18,7 @@ Patch0: 0001-Change-desktop-color-to-Qubes-background.patch
 Patch1: 0002-Adjust-boot-menu-size-to-properly-show-advanced-entr.patch
 Patch2: 0003-Change-default-gray-color-to-render-better-with-Qube.patch
 
-BuildRequires: ImageMagick
+BuildRequires: GraphicsMagick
 Requires: grub2
 Provides: qubes-grub = %{version}-%{release}
 
@@ -30,7 +30,7 @@ Provides: qubes-grub = %{version}-%{release}
 install -m 644 -p %{SOURCE1} %{SOURCE10} .
 
 %build
-convert -size 1920x1080 -background none %{SOURCE1} qubes.png
+gm convert -size 1920x1080 -background none %{SOURCE1} qubes.png
 
 %install
 mkdir -p %{buildroot}%{_grubthemedir}/qubes
